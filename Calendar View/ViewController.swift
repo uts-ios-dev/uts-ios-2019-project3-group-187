@@ -84,7 +84,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
             cell.selectedView.layer.cornerRadius =  13
             cell.selectedView.isHidden = false
         
-            dayLabel.text = "The Date is: " + month + " " + cell.dateLabel.text!
+            dayLabel.text = "The Date is: " + month + " " + cell.dateLabel.text! + ""
         } else {
             cell.selectedView.isHidden = true
         }
