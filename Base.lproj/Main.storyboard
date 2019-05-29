@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHM-bC-IMH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" customModule="timeLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Main">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-x8-3IJ" userLabel="Today Label">
+                                <rect key="frame" x="158" y="77" width="59" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="EcG-oG-RLi"/>
+                                    <constraint firstAttribute="width" constant="59" id="tNl-0L-tfO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo7-JV-kNy" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="111" width="375" height="285"/>
+                                <color key="backgroundColor" red="0.68871590987783526" green="0.89327646641775749" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="5jo-KB-qtq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ml9-Pf-tda" userLabel="Event View">
+                                <rect key="frame" x="0.0" y="423" width="375" height="244"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="XWG-KC-Nmu">
+                                        <rect key="frame" x="17" y="54" width="336" height="150"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-E6-ZKZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="336" height="57.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-IS-rRB" userLabel="Sleep View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54Y-kz-Bpj" userLabel="Sleep Label">
+                                                                <rect key="frame" x="25.5" y="0.0" width="43" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-ad-g5K" userLabel="Sleep Stepper">
+                                                                <rect key="frame" x="0.0" y="28.5" width="94" height="29"/>
+                                                                <color key="backgroundColor" name="sleepColor"/>
+                                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="sleepChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="czY-69-fdN"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bOG-Ln-wXe" userLabel="Eat View">
+                                                        <rect key="frame" x="121" y="0.0" width="94" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-Qm-dNI" userLabel="Eat Label">
+                                                                <rect key="frame" x="34.5" y="0.0" width="25" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="24" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-vX-ql2" userLabel="Eat Stepper">
+                                                                <rect key="frame" x="0.0" y="28.5" width="94" height="29"/>
+                                                                <color key="backgroundColor" name="eatColor"/>
+                                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="eatChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DR0-O6-wLJ"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Shg-Ha-Dy8" userLabel="Play View">
+                                                        <rect key="frame" x="242" y="0.0" width="94" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc5-Hx-K1a" userLabel="Play Label">
+                                                                <rect key="frame" x="31" y="0.0" width="32" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="24" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-Ll-2Zl" userLabel="Play Stepper">
+                                                                <rect key="frame" x="0.0" y="28.5" width="94" height="29"/>
+                                                                <color key="backgroundColor" name="playColor"/>
+                                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="playChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LyV-Q7-vEq"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                        <color key="tintColor" name="playColor"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="s74-sD-ePn">
+                                                <rect key="frame" x="0.0" y="92.5" width="217" height="57.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FgT-FW-wb1" userLabel="Work View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elh-nl-f9S" userLabel="Work Label">
+                                                                <rect key="frame" x="27" y="0.0" width="40" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="24" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Lm-62-QYR" userLabel="Work Stepper">
+                                                                <rect key="frame" x="0.0" y="28.5" width="94" height="29"/>
+                                                                <color key="backgroundColor" name="workColor"/>
+                                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="workChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="79M-hJ-UIF"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rsk-gt-nd9" userLabel="Study View">
+                                                        <rect key="frame" x="123" y="0.0" width="94" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbR-8Q-wjr" userLabel="Study Label">
+                                                                <rect key="frame" x="24.5" y="0.0" width="45" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-LC-8ca" userLabel="Study Stepper">
+                                                                <rect key="frame" x="0.0" y="28.5" width="94" height="29"/>
+                                                                <color key="backgroundColor" name="studyColor"/>
+                                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="studyChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sBu-vi-xTg"/>
+                                                                </connections>
+                                                            </stepper>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="HwO-y3-dsm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45764541625976562" green="0.73640745878219604" blue="0.90647691488265991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XWG-KC-Nmu" firstAttribute="leading" secondItem="Ml9-Pf-tda" secondAttribute="leading" constant="17" id="66e-JX-XGW"/>
+                                    <constraint firstItem="XWG-KC-Nmu" firstAttribute="top" secondItem="Ml9-Pf-tda" secondAttribute="top" constant="54" id="k6V-Tm-cd7"/>
+                                    <constraint firstAttribute="trailing" secondItem="XWG-KC-Nmu" secondAttribute="trailing" constant="22" id="t7h-tl-b1Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95715409517288208" green="0.95281988382339478" blue="0.83837127685546875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ml9-Pf-tda" secondAttribute="bottom" id="9ue-9s-w3U"/>
+                            <constraint firstItem="Eo7-JV-kNy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlU-0d-kxP"/>
+                            <constraint firstItem="Ml9-Pf-tda" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KQ1-Ru-rIx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eo7-JV-kNy" secondAttribute="trailing" id="Nwb-9P-5aI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ml9-Pf-tda" secondAttribute="trailing" id="OEI-K9-KWe"/>
+                            <constraint firstItem="2Jq-x8-3IJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="SS1-st-HmH"/>
+                            <constraint firstItem="Eo7-JV-kNy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fc5-kl-Ah6"/>
+                            <constraint firstItem="Ml9-Pf-tda" firstAttribute="top" secondItem="Eo7-JV-kNy" secondAttribute="bottom" constant="27" id="m1o-uO-KTr"/>
+                            <constraint firstItem="2Jq-x8-3IJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="maZ-gR-fyr"/>
+                            <constraint firstItem="Eo7-JV-kNy" firstAttribute="top" secondItem="2Jq-x8-3IJ" secondAttribute="bottom" constant="8" id="nHs-Lt-8hk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Current Date" id="aep-Xf-1N7" userLabel="Current Date">
+                        <barButtonItem key="leftBarButtonItem" title="Calendar" id="t4o-XR-Bab" userLabel="Calendar">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="RD1-xj-cMZ" kind="show" id="pFY-Mn-xia"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="Ydl-DC-Cs8" userLabel="Help">
+                            <string key="title" base64-UTF8="YES">
+ED8
+</string>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chartView" destination="Eo7-JV-kNy" id="KfZ-FC-FRn"/>
+                        <outlet property="eatStepper" destination="Wsm-vX-ql2" id="hcC-A8-zqh"/>
+                        <outlet property="playStepper" destination="BFV-Ll-2Zl" id="ny6-2R-t5n"/>
+                        <outlet property="sleepStepper" destination="dwb-ad-g5K" id="Wa0-2Z-Wml"/>
+                        <outlet property="studyStepper" destination="xmU-LC-8ca" id="Vh3-Qa-ExM"/>
+                        <outlet property="workStepper" destination="5Lm-62-QYR" id="lkX-7P-Tv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.2" y="25.637181409295355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a6I-8z-kh7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHM-bC-IMH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gde-H1-Yn7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11035156881573505" green="0.37379061400629365" blue="0.61190495466321249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gbo-Ou-kIQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2E-qV-oFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-689"/>
+        </scene>
+        <!--Ib Calendar Data Source-->
+        <scene sceneID="R8M-8u-Gn3">
+            <objects>
+                <viewController id="RD1-xj-cMZ" customClass="ViewController" customModule="timeLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DnD-qC-fop">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-fz-lsc" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="16" y="69" width="343" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="biI-aS-6lm">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="2Pe-cy-BLi" customClass="DateCell" customModule="timeLogger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-N5-HgK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" name="workColor"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-ul-z3e">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="hcn-ul-z3e" id="Zqe-Rt-3y0"/>
+                                            <outlet property="selectedView" destination="8OS-N5-HgK" id="JE4-VC-c1u"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="tAJ-Dy-O9u" customClass="DateHeader" customModule="calendar">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLh-OI-Kqf">
+                                            <rect key="frame" x="150" y="15" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="RD1-xj-cMZ" id="udN-EK-Ovd"/>
+                                    <outlet property="ibCalendarDelegate" destination="RD1-xj-cMZ" id="OgH-JX-7I9"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The date is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-qR-3fA">
+                                <rect key="frame" x="61" y="442" width="199" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5zg-fV-X3X"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="WdB-fz-lsc" id="eEG-Zr-YIA"/>
+                        <outlet property="dayLabel" destination="oQf-qR-3fA" id="iGt-Dq-i5w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pq-dp-zpg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="eatColor">
+            <color red="0.6119999885559082" green="0.69300001859664917" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="playColor">
+            <color red="0.74400001764297485" green="0.36899998784065247" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sleepColor">
+            <color red="0.38299998641014099" green="0.36899998784065247" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="studyColor">
+            <color red="0.40799999237060547" green="0.53299999237060547" blue="0.79000002145767212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="workColor">
+            <color red="0.28499999642372131" green="0.87300002574920654" blue="0.9089999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
