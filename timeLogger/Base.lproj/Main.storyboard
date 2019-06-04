@@ -181,7 +181,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Calendar" id="t4o-XR-Bab" userLabel="Calendar">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="RD1-xj-cMZ" kind="show" id="pFY-Mn-xia"/>
+                                <segue destination="2UV-kW-VUc" kind="show" id="fgQ-KT-665"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="Ydl-DC-Cs8" userLabel="Help">
@@ -224,39 +224,38 @@ ED8
             <point key="canvasLocation" x="980" y="-689"/>
         </scene>
         <!--Ib Calendar Data Source-->
-        <scene sceneID="R8M-8u-Gn3">
+        <scene sceneID="JBr-U0-ITB">
             <objects>
-                <viewController id="RD1-xj-cMZ" customClass="ViewController" customModule="timeLogger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DnD-qC-fop">
+                <viewController id="2UV-kW-VUc" customClass="ViewController" customModule="timeLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1QU-of-bnT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-fz-lsc" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="16" y="69" width="343" height="320"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-gd-W1J" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="54" y="108" width="266" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="biI-aS-6lm">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="s0x-da-sbj">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="2Pe-cy-BLi" customClass="DateCell" customModule="timeLogger" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="X5g-Cc-Dai" customClass="DateCell" customModule="timeLogger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-N5-HgK">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1Q-T8-jKO">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" name="workColor"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-ul-z3e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dew-qa-v1x">
+                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -265,48 +264,44 @@ ED8
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="dateLabel" destination="hcn-ul-z3e" id="Zqe-Rt-3y0"/>
-                                            <outlet property="selectedView" destination="8OS-N5-HgK" id="JE4-VC-c1u"/>
+                                            <outlet property="dateLabel" destination="dew-qa-v1x" id="Ljx-9L-Kdi"/>
+                                            <outlet property="selectedView" destination="t1Q-T8-jKO" id="oCo-bf-uLM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="tAJ-Dy-O9u" customClass="DateHeader" customModule="calendar">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="lnC-Zg-wx8" customClass="DateHeader" customModule="timeLogger" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="266" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLh-OI-Kqf">
-                                            <rect key="frame" x="150" y="15" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-8X-ndf">
+                                            <rect key="frame" x="112" y="21" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <viewLayoutGuide key="safeArea" id="ooM-tK-EAi"/>
+                                    <connections>
+                                        <outlet property="monthTitle" destination="ScK-8X-ndf" id="Z8p-MC-usb"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
-                                    <outlet property="ibCalendarDataSource" destination="RD1-xj-cMZ" id="udN-EK-Ovd"/>
-                                    <outlet property="ibCalendarDelegate" destination="RD1-xj-cMZ" id="OgH-JX-7I9"/>
+                                    <outlet property="ibCalendarDataSource" destination="2UV-kW-VUc" id="TXQ-oO-bPo"/>
+                                    <outlet property="ibCalendarDelegate" destination="2UV-kW-VUc" id="GR6-ne-ShJ"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The date is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-qR-3fA">
-                                <rect key="frame" x="61" y="442" width="199" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="5zg-fV-X3X"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZXZ-sO-XhV"/>
                     </view>
                     <connections>
-                        <outlet property="calendarView" destination="WdB-fz-lsc" id="eEG-Zr-YIA"/>
-                        <outlet property="dayLabel" destination="oQf-qR-3fA" id="iGt-Dq-i5w"/>
+                        <outlet property="calendarView" destination="QFB-gd-W1J" id="WxL-6Z-yM6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9pq-dp-zpg" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufw-I9-Brd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="37"/>
+            <point key="canvasLocation" x="980" y="34.632683658170919"/>
         </scene>
     </scenes>
     <resources>

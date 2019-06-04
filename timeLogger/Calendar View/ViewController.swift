@@ -25,7 +25,7 @@ extension ViewController: JTAppleCalendarViewDataSource {
         formatter.dateFormat = "yyyy MM dd"
         let startDate = formatter.date(from: "2019 01 01")!
         let endDate = Date()
-        calendarView.scrollToDate(Date())
+       calendarView.scrollToDate(endDate)
          
         return ConfigurationParameters(startDate: startDate, endDate: endDate)
     }
@@ -84,7 +84,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
             cell.selectedView.layer.cornerRadius =  13
             cell.selectedView.isHidden = false
         
-            dayLabel.text = "The Date is: " + month + " " + cell.dateLabel.text! + ""
+            //dayLabel.text = "The Date is: " + month + " " + cell.dateLabel.text! + ""
         } else {
             cell.selectedView.isHidden = true
         }

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021A449522A681500045C3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A449222A6814F0045C3B3 /* ViewController.swift */; };
+		021A449622A681500045C3B3 /* dateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A449322A6814F0045C3B3 /* dateCell.swift */; };
+		021A449722A681500045C3B3 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A449422A681500045C3B3 /* DateHeader.swift */; };
 		3DAED538229DFCD900FC5F68 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAED537229DFCD900FC5F68 /* Charts.framework */; };
-		3DAED53C229E28FF00FC5F68 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAED53A229E28FF00FC5F68 /* DateHeader.swift */; };
-		3DAED53D229E28FF00FC5F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAED53B229E28FF00FC5F68 /* ViewController.swift */; };
-		3DAED53F229E290800FC5F68 /* dateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAED53E229E290800FC5F68 /* dateCell.swift */; };
 		3DD10B1E229D453300DB648D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD10B1D229D453300DB648D /* AppDelegate.swift */; };
 		3DD10B20229D453300DB648D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD10B1F229D453300DB648D /* MainViewController.swift */; };
 		3DD10B23229D453300DB648D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD10B21229D453300DB648D /* Main.storyboard */; };
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021A449222A6814F0045C3B3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../Desktop/calendar/calendar/ViewController.swift; sourceTree = "<group>"; };
+		021A449322A6814F0045C3B3 /* dateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = dateCell.swift; path = ../../../../Desktop/calendar/calendar/dateCell.swift; sourceTree = "<group>"; };
+		021A449422A681500045C3B3 /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateHeader.swift; path = ../../../../Desktop/calendar/calendar/DateHeader.swift; sourceTree = "<group>"; };
 		2FC84C1560F63E3C493ACF15 /* Pods-timeLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeLogger.debug.xcconfig"; path = "Target Support Files/Pods-timeLogger/Pods-timeLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		3DAED505229DF61B00FC5F68 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAED510229DF91B00FC5F68 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAED537229DFCD900FC5F68 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DAED53A229E28FF00FC5F68 /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
-		3DAED53B229E28FF00FC5F68 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DAED53E229E290800FC5F68 /* dateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dateCell.swift; sourceTree = "<group>"; };
 		3DD10B1A229D453300DB648D /* timeLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD10B1D229D453300DB648D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DD10B1F229D453300DB648D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -90,16 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3DAED539229E28DD00FC5F68 /* Calendar View */ = {
-			isa = PBXGroup;
-			children = (
-				3DAED53E229E290800FC5F68 /* dateCell.swift */,
-				3DAED53A229E28FF00FC5F68 /* DateHeader.swift */,
-				3DAED53B229E28FF00FC5F68 /* ViewController.swift */,
-			);
-			path = "Calendar View";
-			sourceTree = "<group>";
-		};
 		3DD10B11229D453300DB648D = {
 			isa = PBXGroup;
 			children = (
@@ -126,11 +116,13 @@
 		3DD10B1C229D453300DB648D /* timeLogger */ = {
 			isa = PBXGroup;
 			children = (
-				3DAED539229E28DD00FC5F68 /* Calendar View */,
 				3DD10B1F229D453300DB648D /* MainViewController.swift */,
 				3DD10B1D229D453300DB648D /* AppDelegate.swift */,
 				3DD10B21229D453300DB648D /* Main.storyboard */,
 				3DD10B24229D453400DB648D /* Assets.xcassets */,
+				021A449322A6814F0045C3B3 /* dateCell.swift */,
+				021A449422A681500045C3B3 /* DateHeader.swift */,
+				021A449222A6814F0045C3B3 /* ViewController.swift */,
 				3DD10B26229D453400DB648D /* LaunchScreen.storyboard */,
 				3DD10B29229D453400DB648D /* Info.plist */,
 			);
@@ -349,11 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAED53C229E28FF00FC5F68 /* DateHeader.swift in Sources */,
-				3DAED53F229E290800FC5F68 /* dateCell.swift in Sources */,
+				021A449722A681500045C3B3 /* DateHeader.swift in Sources */,
+				021A449522A681500045C3B3 /* ViewController.swift in Sources */,
 				3DD10B20229D453300DB648D /* MainViewController.swift in Sources */,
-				3DAED53D229E28FF00FC5F68 /* ViewController.swift in Sources */,
 				3DD10B1E229D453300DB648D /* AppDelegate.swift in Sources */,
+				021A449622A681500045C3B3 /* dateCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
