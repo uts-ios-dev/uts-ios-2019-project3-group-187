@@ -6,7 +6,6 @@ class DateHeader: JTAppleCollectionReusableView  {
     @IBOutlet var monthTitle: UILabel!
     
     func getMonth() -> String{
-        var month = monthTitle.text!
-        return month
+        return monthTitle.text!
     }
 }
